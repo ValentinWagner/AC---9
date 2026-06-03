@@ -15,26 +15,6 @@ Este sistema demuestra la transición desde las tablas estáticas HTML hacia com
 
 ---
 
-## 🚀 Instalación y Ejecución
-
-### Requisitos Previos
-- **Navegador moderno** (Chrome, Firefox, Edge, Safari)
-- **Editor de código** (Visual Studio Code recomendado)
-- **Git** (para clonar el repositorio)
-
-### Pasos de Instalación
-
-#### 1️⃣ Clonar el Repositorio
-```bash
-git clone https://github.com/tu-usuario/Proyecto-Calendario.git
-cd Proyecto-Calendario
-```
-
-#### 2️⃣ Abrir en Visual Studio Code
-```bash
-code .
-```
-
 #### 3️⃣ Ejecutar el Proyecto
 
 **Opción A: Usar Live Server (Recomendado)**
