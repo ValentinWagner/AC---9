@@ -1,0 +1,250 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ margin: 0;
+ padding: 20px;
+}
+
+.calendario-wrapper {
+ background-color: #ffffff;
+ border-radius: 16px;
+ box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+ width: 100%;
+ max-width: 500px;
+ padding: 30px;
+}
+
+/* Controles de navegación */
+.controles {
+ display: flex;
+ gap: 15px;
+ margin-bottom: 25px;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+}
+
+.control-grupo {
+ display: flex;
+ gap: 8px;
+ align-items: center;
+}
+
+label {
+ font-weight: 600;
+ color: #333;
+ font-size: 0.95rem;
+}
+
+select {
+ padding: 8px 12px;
+ border: 2px solid #667eea;
+ border-radius: 6px;
+ font-size: 0.95rem;
+ font-family: inherit;
+ background-color: #f8f9ff;
+ color: #333;
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+
+select:hover {
+ border-color: #764ba2;
+ background-color: #f0f2ff;
+}
+
+select:focus {
+ outline: none;
+ border-color: #764ba2;
+ box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+ padding: 8px 16px;
+ background-color: #667eea;
+ color: white;
+ border: none;
+ border-radius: 6px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ font-size: 0.95rem;
+}
+
+button:hover {
+ background-color: #764ba2;
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+ transform: translateY(0);
+}
+
+/* Cabecera del mes */
+.cabecera-mes {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.cabecera-mes h2 {
+ color: #667eea;
+ margin: 0;
+ font-size: 1.8rem;
+}
+
+/* Días de la semana */
+.dias-semana {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ text-align: center;
+ font-weight: bold;
+ color: #667eea;
+ margin-bottom: 10px;
+ font-size: 0.9rem;
+ gap: 6px;
+}
+
+.dias-semana div {
+ padding: 8px 0;
+ border-bottom: 2px solid #e0e4ff;
+}
+
+/* Grid del calendario */
+.calendario-grid {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ gap: 6px;
+}
+
+/* Celdas del calendario */
+.dia-celda, .dia-vacio {
+ aspect-ratio: 1 / 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 0.95rem;
+ border-radius: 8px;
+ font-weight: 500;
+}
+
+.dia-vacio {
+ background-color: transparent;
+}
+
+.dia-celda {
+ background-color: #edf2f7;
+ color: #2d3748;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ border: 2px solid transparent;
+}
+
+.dia-celda:hover {
+ background-color: #cbd5e0;
+ transform: scale(1.05);
+}
+
+/* Indicador del día actual */
+.hoy {
+ background-color: #3182ce !important;
+ color: #ffffff;
+ font-weight: bold;
+ border: 2px solid #2563eb !important;
+ box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+/* Estilo para los hitos y eventos especiales */
+.evento-marcado {
+ background-color: #e53e3e !important;
+ color: #ffffff;
+ font-weight: bold;
+ border: 2px solid #9b2c2c !important;
+ box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+}
+
+.evento-marcado:hover {
+ background-color: #c53030 !important;
+}
+
+/* Información del evento */
+.info-eventos {
+ margin-top: 25px;
+ padding: 15px;
+ background-color: #f8f9ff;
+ border-radius: 8px;
+ border-left: 4px solid #667eea;
+}
+
+.info-eventos h3 {
+ margin: 0 0 10px 0;
+ color: #667eea;
+ font-size: 0.95rem;
+}
+
+.lista-eventos {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.lista-eventos li {
+ padding: 6px 0;
+ color: #555;
+ font-size: 0.9rem;
+ border-bottom: 1px solid #e0e4ff;
+}
+
+.lista-eventos li:last-child {
+ border-bottom: none;
+}
+
+.evento-item {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+
+.evento-item::before {
+ content: '●';
+ color: #e53e3e;
+ font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+ .calendario-wrapper {
+ padding: 20px;
+ }
+
+ .controles {
+ flex-direction: column;
+ gap: 12px;
+ }
+
+ .control-grupo {
+ width: 100%;
+ justify-content: center;
+ }
+
+ select {
+ flex: 1;
+ min-width: 120px;
+ }
+
+ .cabecera-mes h2 {
+ font-size: 1.5rem;
+ }
+
+ button {
+ width: 100%;
+ }
+}

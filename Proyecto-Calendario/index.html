@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calendario Dinámico UI - PWD 2026</title>
+ <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="calendario-wrapper">
+ <!-- Controles de navegación -->
+ <div class="controles">
+ <div class="control-grupo">
+ <label for="seleccionarMes">Mes:</label>
+ <select id="seleccionarMes"></select>
+ </div>
+ 
+ <div class="control-grupo">
+ <label for="seleccionarAnio">Año:</label>
+ <select id="seleccionarAnio"></select>
+ </div>
+ </div>
+
+ <!-- Botones de navegación -->
+ <div class="controles" style="gap: 8px;">
+ <button id="mesAnterior">< Anterior</button>
+ <button id="hoy" style="background-color: #48bb78;">🎯 Hoy</button>
+ <button id="mesSiguiente">Siguiente ></button>
+ </div>
+
+ <!-- Cabecera del mes -->
+ <div class="cabecera-mes">
+ <h2 id="nombreMes"></h2>
+ </div>
+
+ <!-- Días de la semana -->
+ <div class="dias-semana">
+ <div>Dom</div>
+ <div>Lun</div>
+ <div>Mar</div>
+ <div>Mié</div>
+ <div>Jue</div>
+ <div>Vie</div>
+ <div>Sáb</div>
+ </div>
+
+ <!-- Grid del calendario -->
+ <div id="contenedorDias" class="calendario-grid">
+ <!-- Los días se inyectarán desde script.js -->
+ </div>
+
+ <!-- Información de eventos -->
+ <div id="infoEventos" class="info-eventos"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
